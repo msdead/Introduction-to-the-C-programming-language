@@ -1,3 +1,10 @@
-﻿Console.WriteLine("Введите число");
-int[] a = {2};
-Console.WriteLine($"Числа: {a}");
+﻿Console.WriteLine("Введите первое целое число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+int max = a;
+Console.WriteLine("Введите второе целое число: ");
+int b = Convert.ToInt32(Console.ReadLine());
+if (b > a) max = b;
+Console.WriteLine("Введите третье целое число: ");
+int c = Convert.ToInt32(Console.ReadLine());
+if (c > b) max = c;
+Console.WriteLine($"Максимальное введенное число = {max} ");

@@ -11,4 +11,4 @@ int Sum(int x)
     }
     return result;
 }
-Console.Write(Sum(x));
+Console.Write($"Сумма цифр в числе {x} --> {Sum(x)}");

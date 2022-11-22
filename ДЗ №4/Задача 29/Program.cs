@@ -1,20 +1,23 @@
-﻿int number = 0;
-while (number <= 0)
-{
-    Console.Write("Введите число: ");
-    number = Convert.ToInt32(Console.ReadLine());
-    if (number <= 0) Console.WriteLine("Введены неверные данные");
-}
+﻿Console.WriteLine("Выберите размер массива: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[n];
 
-int MultDigits(int num)
+void RandomArray(int[] array)
 {
-    int mult = 1;
-    for (int i = 1; i <= num; i++)
+    Random rnd = new Random();
+    for (int i = 0; i < array.Length; i++)
     {
-        mult = mult * i;
+        array[i] = rnd.Next(0,100);
     }
-    return mult;
 }
 
-int multDigits = MultDigits(number);
-Console.WriteLine($"Произведение чисел от 1 до {number} = {multDigits}");
+void PrintArray(int[]array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+}
+
+RandomArray(array);
+PrintArray(array);

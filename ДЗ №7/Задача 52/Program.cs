@@ -38,6 +38,7 @@ double[] SumMatrix(double[,] matrix)
         {
             array[i] = array[i] + matrix[j, i];
         }
+        array[i] = array[i] / matrix.GetLength(0);
     }
     return array;
 }
